@@ -1,9 +1,9 @@
-/* 🎨 Colores y fuentes */
+/* 🌿 Colores y fuentes */
 :root {
-    --verde-suave: #c4d6aa;
+    --verde-suave: #d6e4c2;
     --verde-oscuro: #4b6043;
     --blanco: #fff;
-    --negro: #1f1f1f;
+    --negro: #222;
     --fuente-titulo: 'Great Vibes', cursive;
     --fuente-texto: 'Playfair Display', serif;
 }
@@ -16,83 +16,95 @@
 
 body {
     font-family: var(--fuente-texto);
-    color: var(--negro);
     background-color: var(--blanco);
+    color: var(--negro);
     scroll-behavior: smooth;
 }
 
-/* 🔝 Navbar */
+/* 🔝 NAVBAR */
 header {
     background-color: var(--verde-oscuro);
-    padding: 10px 20px;
     position: fixed;
     width: 100%;
+    top: 0;
     z-index: 1000;
 }
 
 .navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
-.logo {
+.logo h1 {
     font-family: var(--fuente-titulo);
-    font-size: 2rem;
     color: var(--blanco);
+    font-size: 2rem;
 }
 
-.navbar ul {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
-.navbar a {
+.nav-links a {
     text-decoration: none;
     color: var(--blanco);
     font-weight: 600;
     transition: color 0.3s;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
     color: var(--verde-suave);
 }
 
-/* 🏠 Inicio */
-.inicio {
-    height: 100vh;
-    position: relative;
+/* 🌿 BANNER */
+.banner {
+    height: 90vh;
+    background: url('banner.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--blanco);
     text-align: center;
+    color: var(--blanco);
+    padding-top: 60px;
 }
 
-#video-fondo {
+.banner::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    height: 90vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
-.inicio-texto h2 {
+.banner-texto {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-texto h2 {
     font-family: var(--fuente-titulo);
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 10px;
 }
 
-/* 📜 Menú */
+.banner-texto p {
+    font-size: 1.2rem;
+}
+
+/* 📜 MENÚ */
 .menu {
     padding: 80px 20px;
-    background-color: var(--verde-suave);
     text-align: center;
+    background-color: var(--verde-suave);
 }
 
 .menu h2 {
@@ -121,8 +133,8 @@ header {
     font-size: 1.8rem;
 }
 
-/* 🌿 Visión y Misión */
-.vision-mision {
+/* 🌿 MISIÓN Y VISIÓN */
+.mision-vision {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -131,23 +143,23 @@ header {
     background-color: var(--blanco);
 }
 
-.vision, .mision {
+.caja {
     flex: 1;
     min-width: 300px;
-    max-width: 500px;
+    max-width: 450px;
     background-color: var(--verde-suave);
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.vision h2, .mision h2 {
+.caja h2 {
     font-family: var(--fuente-titulo);
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-/* 🌐 Footer */
+/* 🌐 FOOTER */
 footer {
     background-color: var(--verde-oscuro);
     color: var(--blanco);
